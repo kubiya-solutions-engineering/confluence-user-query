@@ -1,3 +1,20 @@
+terraform {
+  required_providers {
+    kubiya = {
+      source = "kubiya-terraform/kubiya"
+    }
+    null = {
+      source  = "hashicorp/null"
+      version = "~> 3.0"
+    }
+    external = {
+      source  = "hashicorp/external"
+      version = "~> 2.0"
+    }
+  }
+}
+
+
 provider "kubiya" {
   // API key is set as an environment variable KUBIYA_API_KEY
 }
